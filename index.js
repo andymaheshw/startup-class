@@ -9,6 +9,10 @@ app.get('/', function(request, response) {
   response.send(fs.readFileSync('index.html').toString());
 })
 
+app.get('/hello',function(request,response) {
+	response.send("Hello buddy!");
+});
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
